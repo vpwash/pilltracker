@@ -78,7 +78,6 @@ const AddMedicationDialog: React.FC<AddMedicationDialogProps> = ({
             newValue: { name: string; brand: string; dosage: string[] } | null
           ) => {
             setSelectedMedication(newValue)
-            setDose('') // Reset dose when medication changes
           }}
           inputValue={medicationNameInput}
           onInputChange={(
