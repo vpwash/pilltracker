@@ -1,0 +1,1803 @@
+[
+  {
+    "name": "Lisinopril",
+    "brand": "Prinivil, Zestril",
+    "dosage": ["2.5 mg", "5 mg", "10 mg", "20 mg", "30 mg", "40 mg"]
+  },
+  {
+    "name": "Levothyroxine",
+    "brand": "Synthroid, Levoxyl, Euthyrox",
+    "dosage": [
+      "25 mcg",
+      "50 mcg",
+      "75 mcg",
+      "88 mcg",
+      "100 mcg",
+      "112 mcg",
+      "125 mcg",
+      "137 mcg",
+      "150 mcg",
+      "175 mcg",
+      "200 mcg",
+      "300 mcg"
+    ]
+  },
+  {
+    "name": "Atorvastatin",
+    "brand": "Lipitor",
+    "dosage": ["10 mg", "20 mg", "40 mg", "80 mg"]
+  },
+  {
+    "name": "Metformin",
+    "brand": "Glucophage, Fortamet, Glumetza",
+    "dosage": ["500 mg", "850 mg", "1000 mg"]
+  },
+  {
+    "name": "Amlodipine",
+    "brand": "Norvasc",
+    "dosage": ["2.5 mg", "5 mg", "10 mg"]
+  },
+  {
+    "name": "Hydrochlorothiazide",
+    "brand": "Microzide",
+    "dosage": ["12.5 mg", "25 mg", "50 mg"]
+  },
+  {
+    "name": "Gabapentin",
+    "brand": "Neurontin, Gralise",
+    "dosage": ["100 mg", "300 mg", "400 mg", "600 mg", "800 mg"]
+  },
+  {
+    "name": "Omeprazole",
+    "brand": "Prilosec",
+    "dosage": ["10 mg", "20 mg", "40 mg"]
+  },
+  {
+    "name": "Losartan",
+    "brand": "Cozaar",
+    "dosage": ["25 mg", "50 mg", "100 mg"]
+  },
+  {
+    "name": "Albuterol",
+    "brand": "ProAir HFA, Ventolin HFA, Proventil HFA",
+    "dosage": ["90 mcg/actuation"]
+  },
+  {
+    "name": "Simvastatin",
+    "brand": "Zocor",
+    "dosage": ["5 mg", "10 mg", "20 mg", "40 mg", "80 mg"]
+  },
+  {
+    "name": "Metoprolol Succinate",
+    "brand": "Toprol XL",
+    "dosage": ["25 mg", "50 mg", "100 mg", "200 mg"]
+  },
+  {
+    "name": "Metoprolol Tartrate",
+    "brand": "Lopressor",
+    "dosage": ["25 mg", "50 mg", "100 mg"]
+  },
+  {
+    "name": "Hydrocodone/Acetaminophen",
+    "brand": "Norco, Vicodin, Lortab",
+    "dosage": ["various combinations, e.g., 5/325 mg, 7.5/325 mg, 10/325 mg"]
+  },
+  {
+    "name": "Furosemide",
+    "brand": "Lasix",
+    "dosage": ["20 mg", "40 mg", "80 mg"]
+  },
+  {
+    "name": "Pantoprazole",
+    "brand": "Protonix",
+    "dosage": ["20 mg", "40 mg"]
+  },
+  {
+    "name": "Escitalopram",
+    "brand": "Lexapro",
+    "dosage": ["5 mg", "10 mg", "20 mg"]
+  },
+  {
+    "name": "Sertraline",
+    "brand": "Zoloft",
+    "dosage": ["25 mg", "50 mg", "100 mg"]
+  },
+  {
+    "name": "Trazodone",
+    "brand": "Desyrel, Oleptro",
+    "dosage": ["50 mg", "100 mg", "150 mg", "300 mg"]
+  },
+  {
+    "name": "Amoxicillin",
+    "brand": "Amoxil, Moxatag",
+    "dosage": ["250 mg", "500 mg", "875 mg"]
+  },
+  {
+    "name": "Azithromycin",
+    "brand": "Zithromax, Z-Pak",
+    "dosage": ["250 mg", "500 mg"]
+  },
+  {
+    "name": "Prednisone",
+    "brand": "Deltasone",
+    "dosage": ["1 mg", "2.5 mg", "5 mg", "10 mg", "20 mg", "50 mg"]
+  },
+  {
+    "name": "Ibuprofen",
+    "brand": "Advil, Motrin",
+    "dosage": ["200 mg", "400 mg", "600 mg", "800 mg (Rx)"]
+  },
+  {
+    "name": "Tramadol",
+    "brand": "Ultram",
+    "dosage": ["50 mg", "100 mg"]
+  },
+  {
+    "name": "Clonazepam",
+    "brand": "Klonopin",
+    "dosage": ["0.5 mg", "1 mg", "2 mg"]
+  },
+
+  {
+    "name": "Lisinopril",
+    "brand": "Prinivil, Zestril",
+    "dosage": ["2.5 mg", "5 mg", "10 mg", "20 mg", "30 mg", "40 mg"]
+  },
+  {
+    "name": "Levothyroxine",
+    "brand": "Synthroid, Levoxyl, Euthyrox",
+    "dosage": [
+      "25 mcg",
+      "50 mcg",
+      "75 mcg",
+      "88 mcg",
+      "100 mcg",
+      "112 mcg",
+      "125 mcg",
+      "137 mcg",
+      "150 mcg",
+      "175 mcg",
+      "200 mcg",
+      "300 mcg"
+    ]
+  },
+  {
+    "name": "Atorvastatin",
+    "brand": "Lipitor",
+    "dosage": ["10 mg", "20 mg", "40 mg", "80 mg"]
+  },
+  {
+    "name": "Metformin",
+    "brand": "Glucophage, Fortamet, Glumetza",
+    "dosage": ["500 mg", "850 mg", "1000 mg"]
+  },
+  {
+    "name": "Amlodipine",
+    "brand": "Norvasc",
+    "dosage": ["2.5 mg", "5 mg", "10 mg"]
+  },
+  {
+    "name": "Hydrochlorothiazide",
+    "brand": "Microzide",
+    "dosage": ["12.5 mg", "25 mg", "50 mg"]
+  },
+  {
+    "name": "Gabapentin",
+    "brand": "Neurontin, Gralise",
+    "dosage": ["100 mg", "300 mg", "400 mg", "600 mg", "800 mg"]
+  },
+  {
+    "name": "Omeprazole",
+    "brand": "Prilosec",
+    "dosage": ["10 mg", "20 mg", "40 mg"]
+  },
+  {
+    "name": "Losartan",
+    "brand": "Cozaar",
+    "dosage": ["25 mg", "50 mg", "100 mg"]
+  },
+  {
+    "name": "Albuterol",
+    "brand": "ProAir HFA, Ventolin HFA, Proventil HFA",
+    "dosage": ["90 mcg/actuation"]
+  },
+  {
+    "name": "Simvastatin",
+    "brand": "Zocor",
+    "dosage": ["5 mg", "10 mg", "20 mg", "40 mg", "80 mg"]
+  },
+  {
+    "name": "Metoprolol Succinate",
+    "brand": "Toprol XL",
+    "dosage": ["25 mg", "50 mg", "100 mg", "200 mg"]
+  },
+  {
+    "name": "Metoprolol Tartrate",
+    "brand": "Lopressor",
+    "dosage": ["25 mg", "50 mg", "100 mg"]
+  },
+  {
+    "name": "Hydrocodone/Acetaminophen",
+    "brand": "Norco, Vicodin, Lortab",
+    "dosage": ["various combinations, e.g., 5/325 mg, 7.5/325 mg, 10/325 mg"]
+  },
+  {
+    "name": "Furosemide",
+    "brand": "Lasix",
+    "dosage": ["20 mg", "40 mg", "80 mg"]
+  },
+  {
+    "name": "Pantoprazole",
+    "brand": "Protonix",
+    "dosage": ["20 mg", "40 mg"]
+  },
+  {
+    "name": "Escitalopram",
+    "brand": "Lexapro",
+    "dosage": ["5 mg", "10 mg", "20 mg"]
+  },
+  {
+    "name": "Sertraline",
+    "brand": "Zoloft",
+    "dosage": ["25 mg", "50 mg", "100 mg"]
+  },
+  {
+    "name": "Trazodone",
+    "brand": "Desyrel, Oleptro",
+    "dosage": ["50 mg", "100 mg", "150 mg", "300 mg"]
+  },
+  {
+    "name": "Amoxicillin",
+    "brand": "Amoxil, Moxatag",
+    "dosage": ["250 mg", "500 mg", "875 mg"]
+  },
+  {
+    "name": "Azithromycin",
+    "brand": "Zithromax, Z-Pak",
+    "dosage": ["250 mg", "500 mg"]
+  },
+  {
+    "name": "Prednisone",
+    "brand": "Deltasone",
+    "dosage": ["1 mg", "2.5 mg", "5 mg", "10 mg", "20 mg", "50 mg"]
+  },
+  {
+    "name": "Tramadol",
+    "brand": "Ultram",
+    "dosage": ["50 mg", "100 mg"]
+  },
+  {
+    "name": "Clonazepam",
+    "brand": "Klonopin",
+    "dosage": ["0.5 mg", "1 mg", "2 mg"]
+  },
+  {
+    "name": "Warfarin",
+    "brand": "Coumadin, Jantoven",
+    "dosage": [
+      "1 mg",
+      "2 mg",
+      "2.5 mg",
+      "3 mg",
+      "4 mg",
+      "5 mg",
+      "6 mg",
+      "7.5 mg",
+      "10 mg"
+    ]
+  },
+  {
+    "name": "Cyclobenzaprine",
+    "brand": "Flexeril, Amrix",
+    "dosage": ["5 mg", "10 mg"]
+  },
+  {
+    "name": "Meloxicam",
+    "brand": "Mobic",
+    "dosage": ["7.5 mg", "15 mg"]
+  },
+  {
+    "name": "Citalopram",
+    "brand": "Celexa",
+    "dosage": ["10 mg", "20 mg", "40 mg"]
+  },
+  {
+    "name": "Rosuvastatin",
+    "brand": "Crestor",
+    "dosage": ["5 mg", "10 mg", "20 mg", "40 mg"]
+  },
+  {
+    "name": "Potassium Chloride",
+    "brand": "Klor-Con, K-Dur",
+    "dosage": ["8 mEq", "10 mEq", "20 mEq"]
+  },
+  {
+    "name": "Alprazolam",
+    "brand": "Xanax",
+    "dosage": ["0.25 mg", "0.5 mg", "1 mg", "2 mg"]
+  },
+  {
+    "name": "Bupropion",
+    "brand": "Wellbutrin, Zyban",
+    "dosage": ["75 mg", "100 mg", "150 mg", "300 mg"]
+  },
+  {
+    "name": "Venlafaxine",
+    "brand": "Effexor XR",
+    "dosage": ["37.5 mg", "75 mg", "150 mg", "225 mg"]
+  },
+  {
+    "name": "Ranitidine",
+    "brand": "Zantac (Note: largely recalled/replaced)",
+    "dosage": ["75 mg", "150 mg", "300 mg"]
+  },
+  {
+    "name": "Famotidine",
+    "brand": "Pepcid",
+    "dosage": ["10 mg", "20 mg", "40 mg"]
+  },
+  {
+    "name": "Allopurinol",
+    "brand": "Zyloprim",
+    "dosage": ["100 mg", "300 mg"]
+  },
+  {
+    "name": "Ondansetron",
+    "brand": "Zofran",
+    "dosage": ["4 mg", "8 mg"]
+  },
+  {
+    "name": "Insulin Glargine",
+    "brand": "Lantus, Basaglar",
+    "dosage": ["100 units/mL", "300 units/mL (Toujeo)"]
+  },
+  {
+    "name": "Montelukast",
+    "brand": "Singulair",
+    "dosage": ["4 mg", "5 mg", "10 mg"]
+  },
+  {
+    "name": "Tamsulosin",
+    "brand": "Flomax",
+    "dosage": ["0.4 mg"]
+  },
+  {
+    "name": "Lorazepam",
+    "brand": "Ativan",
+    "dosage": ["0.5 mg", "1 mg", "2 mg"]
+  },
+  {
+    "name": "Fluoxetine",
+    "brand": "Prozac",
+    "dosage": ["10 mg", "20 mg", "40 mg"]
+  },
+  {
+    "name": "Carvedilol",
+    "brand": "Coreg",
+    "dosage": ["3.125 mg", "6.25 mg", "12.5 mg", "25 mg"]
+  },
+  {
+    "name": "Amitriptyline",
+    "brand": "Elavil",
+    "dosage": ["10 mg", "25 mg", "50 mg", "75 mg", "100 mg", "150 mg"]
+  },
+  {
+    "name": "Naproxen",
+    "brand": "Aleve, Naprosyn",
+    "dosage": ["220 mg (OTC)", "250 mg", "375 mg", "500 mg (Rx)"]
+  },
+  {
+    "name": "Pravastatin",
+    "brand": "Pravachol",
+    "dosage": ["10 mg", "20 mg", "40 mg", "80 mg"]
+  },
+  {
+    "name": "Doxycycline Hyclate",
+    "brand": "Vibramycin",
+    "dosage": ["50 mg", "100 mg"]
+  },
+  {
+    "name": "Cetirizine",
+    "brand": "Zyrtec",
+    "dosage": ["5 mg", "10 mg"]
+  },
+  {
+    "name": "Loratadine",
+    "brand": "Claritin",
+    "dosage": ["10 mg"]
+  },
+  {
+    "name": "Clopidogrel",
+    "brand": "Plavix",
+    "dosage": ["75 mg", "300 mg"]
+  },
+  {
+    "name": "Cephalexin",
+    "brand": "Keflex",
+    "dosage": ["250 mg", "500 mg"]
+  },
+  {
+    "name": "Spironolactone",
+    "brand": "Aldactone",
+    "dosage": ["25 mg", "50 mg", "100 mg"]
+  },
+  {
+    "name": "Sulfamethoxazole/Trimethoprim",
+    "brand": "Bactrim, Septra",
+    "dosage": ["various, e.g., 400/80 mg, 800/160 mg (DS)"]
+  },
+  {
+    "name": "Oxycodone",
+    "brand": "Roxicodone, OxyContin",
+    "dosage": ["5 mg", "10 mg", "15 mg", "20 mg", "30 mg", "etc."]
+  },
+  {
+    "name": "Oxycodone/Acetaminophen",
+    "brand": "Percocet, Roxicet",
+    "dosage": ["various combinations, e.g., 5/325 mg, 10/325 mg"]
+  },
+  {
+    "name": "Ezetimibe",
+    "brand": "Zetia",
+    "dosage": ["10 mg"]
+  },
+  {
+    "name": "Insulin Lispro",
+    "brand": "Humalog",
+    "dosage": ["100 units/mL", "200 units/mL"]
+  },
+  {
+    "name": "Insulin Aspart",
+    "brand": "Novolog",
+    "dosage": ["100 units/mL"]
+  },
+  {
+    "name": "Apixaban",
+    "brand": "Eliquis",
+    "dosage": ["2.5 mg", "5 mg"]
+  },
+  {
+    "name": "Rivaroxaban",
+    "brand": "Xarelto",
+    "dosage": ["2.5 mg", "10 mg", "15 mg", "20 mg"]
+  },
+  {
+    "name": "Glipizide",
+    "brand": "Glucotrol",
+    "dosage": ["5 mg", "10 mg"]
+  },
+  {
+    "name": "Duloxetine",
+    "brand": "Cymbalta",
+    "dosage": ["20 mg", "30 mg", "60 mg"]
+  },
+  {
+    "name": "Buspirone",
+    "brand": "Buspar",
+    "dosage": ["5 mg", "7.5 mg", "10 mg", "15 mg", "30 mg"]
+  },
+  {
+    "name": "Finasteride",
+    "brand": "Proscar, Propecia",
+    "dosage": ["1 mg", "5 mg"]
+  },
+  {
+    "name": "Triamterene/Hydrochlorothiazide",
+    "brand": "Dyazide, Maxzide",
+    "dosage": ["various combinations, e.g., 37.5/25 mg"]
+  },
+  {
+    "name": "Zolpidem",
+    "brand": "Ambien",
+    "dosage": ["5 mg", "10 mg"]
+  },
+  {
+    "name": "Benazepril",
+    "brand": "Lotensin",
+    "dosage": ["5 mg", "10 mg", "20 mg", "40 mg"]
+  },
+  {
+    "name": "Diclofenac Sodium",
+    "brand": "Voltaren",
+    "dosage": ["50 mg", "75 mg", "100 mg (oral); 1% (topical gel)"]
+  },
+  {
+    "name": "Esomeprazole",
+    "brand": "Nexium",
+    "dosage": ["20 mg", "40 mg"]
+  },
+  {
+    "name": "Quetiapine",
+    "brand": "Seroquel",
+    "dosage": ["25 mg", "50 mg", "100 mg", "200 mg", "300 mg", "400 mg"]
+  },
+  {
+    "name": "Amphetamine/Dextroamphetamine",
+    "brand": "Adderall",
+    "dosage": ["5 mg", "10 mg", "15 mg", "20 mg", "30 mg (IR and XR)"]
+  },
+  {
+    "name": "Methylphenidate",
+    "brand": "Ritalin, Concerta",
+    "dosage": [
+      "various IR and ER forms, e.g., 5 mg, 10 mg, 18 mg, 27 mg, 36 mg, 54 mg"
+    ]
+  },
+  {
+    "name": "Lansoprazole",
+    "brand": "Prevacid",
+    "dosage": ["15 mg", "30 mg"]
+  },
+  {
+    "name": "Tiotropium",
+    "brand": "Spiriva",
+    "dosage": ["18 mcg (HandiHaler)", "2.5 mcg (Respimat)"]
+  },
+  {
+    "name": "Sitagliptin",
+    "brand": "Januvia",
+    "dosage": ["25 mg", "50 mg", "100 mg"]
+  },
+  {
+    "name": "Valacyclovir",
+    "brand": "Valtrex",
+    "dosage": ["500 mg", "1 g"]
+  },
+  {
+    "name": "Acyclovir",
+    "brand": "Zovirax",
+    "dosage": ["200 mg", "400 mg", "800 mg"]
+  },
+  {
+    "name": "Pregabalin",
+    "brand": "Lyrica",
+    "dosage": [
+      "25 mg",
+      "50 mg",
+      "75 mg",
+      "100 mg",
+      "150 mg",
+      "200 mg",
+      "225 mg",
+      "300 mg"
+    ]
+  },
+  {
+    "name": "Hydralazine",
+    "brand": "Apresoline",
+    "dosage": ["10 mg", "25 mg", "50 mg", "100 mg"]
+  },
+  {
+    "name": "Hydroxychloroquine",
+    "brand": "Plaquenil",
+    "dosage": ["200 mg"]
+  },
+  {
+    "name": "Propranolol",
+    "brand": "Inderal",
+    "dosage": ["10 mg", "20 mg", "40 mg", "60 mg", "80 mg"]
+  },
+  {
+    "name": "Diazepam",
+    "brand": "Valium",
+    "dosage": ["2 mg", "5 mg", "10 mg"]
+  },
+  {
+    "name": "Ciprofloxacin",
+    "brand": "Cipro",
+    "dosage": ["250 mg", "500 mg", "750 mg"]
+  },
+  {
+    "name": "Levofloxacin",
+    "brand": "Levaquin",
+    "dosage": ["250 mg", "500 mg", "750 mg"]
+  },
+  {
+    "name": "Topiramate",
+    "brand": "Topamax",
+    "dosage": ["25 mg", "50 mg", "100 mg", "200 mg"]
+  },
+  {
+    "name": "Sumatriptan",
+    "brand": "Imitrex",
+    "dosage": ["25 mg", "50 mg", "100 mg (oral); various nasal/injectable"]
+  },
+  {
+    "name": "Budesonide/Formoterol",
+    "brand": "Symbicort",
+    "dosage": ["80/4.5 mcg", "160/4.5 mcg"]
+  },
+  {
+    "name": "Fluticasone/Salmeterol",
+    "brand": "Advair Diskus, Advair HFA",
+    "dosage": [
+      "various strengths, e.g., 100/50 mcg, 250/50 mcg, 500/50 mcg (Diskus)"
+    ]
+  },
+  {
+    "name": "Fluticasone Propionate (nasal)",
+    "brand": "Flonase",
+    "dosage": ["50 mcg/spray"]
+  },
+  {
+    "name": "Mometasone Furoate (nasal)",
+    "brand": "Nasonex",
+    "dosage": ["50 mcg/spray"]
+  },
+  {
+    "name": "Risperidone",
+    "brand": "Risperdal",
+    "dosage": ["0.25 mg", "0.5 mg", "1 mg", "2 mg", "3 mg", "4 mg"]
+  },
+  {
+    "name": "Olanzapine",
+    "brand": "Zyprexa",
+    "dosage": ["2.5 mg", "5 mg", "7.5 mg", "10 mg", "15 mg", "20 mg"]
+  },
+  {
+    "name": "Latranoprost",
+    "brand": "Xalatan",
+    "dosage": ["0.005% eye drops"]
+  },
+  {
+    "name": "Timolol Maleate (ophthalmic)",
+    "brand": "Timoptic",
+    "dosage": ["0.25%", "0.5% eye drops"]
+  },
+  {
+    "name": "Estradiol",
+    "brand": "Estrace, Vivelle-Dot, Climara",
+    "dosage": ["various oral, transdermal, topical, vaginal forms"]
+  },
+  {
+    "name": "Testosterone",
+    "brand": "AndroGel, Testim, Fortesta",
+    "dosage": ["various topical gels, patches, injections"]
+  },
+  {
+    "name": "Codeine/Acetaminophen",
+    "brand": "Tylenol #3, Tylenol #4",
+    "dosage": ["30/300 mg (#3)", "60/300 mg (#4)"]
+  },
+  {
+    "name": "Phentermine",
+    "brand": "Adipex-P, Lomaira",
+    "dosage": ["8 mg", "15 mg", "30 mg", "37.5 mg"]
+  },
+  {
+    "name": "Nifedipine",
+    "brand": "Procardia, Adalat CC",
+    "dosage": ["10 mg, 20 mg (IR); 30 mg, 60 mg, 90 mg (ER)"]
+  },
+  {
+    "name": "Verapamil",
+    "brand": "Calan, Verelan",
+    "dosage": [
+      "various IR and SR forms, e.g., 40 mg, 80 mg, 120 mg, 180 mg, 240 mg"
+    ]
+  },
+  {
+    "name": "Diltiazem",
+    "brand": "Cardizem, Tiazac",
+    "dosage": [
+      "various IR and ER forms, e.g., 30 mg, 60 mg, 90 mg, 120 mg, 180 mg, 240 mg, 300 mg, 360 mg"
+    ]
+  },
+  {
+    "name": "Clindamycin",
+    "brand": "Cleocin",
+    "dosage": ["150 mg", "300 mg (oral); various topical/vaginal"]
+  },
+  {
+    "name": "Methotrexate",
+    "brand": "Trexall, Rheumatrex",
+    "dosage": ["2.5 mg tablets; various injectable"]
+  },
+  {
+    "name": "Donepezil",
+    "brand": "Aricept",
+    "dosage": ["5 mg", "10 mg", "23 mg"]
+  },
+  {
+    "name": "Memantine",
+    "brand": "Namenda",
+    "dosage": ["5 mg", "10 mg (IR); various ER capsules"]
+  },
+  {
+    "name": "Glyburide",
+    "brand": "Diabeta, Glynase",
+    "dosage": ["1.25 mg", "2.5 mg", "5 mg"]
+  },
+  {
+    "name": "Pioglitazone",
+    "brand": "Actos",
+    "dosage": ["15 mg", "30 mg", "45 mg"]
+  },
+  {
+    "name": "Atenolol",
+    "brand": "Tenormin",
+    "dosage": ["25 mg", "50 mg", "100 mg"]
+  },
+  {
+    "name": "Bisoprolol",
+    "brand": "Zebeta",
+    "dosage": ["5 mg", "10 mg"]
+  },
+  {
+    "name": "Isosorbide Mononitrate",
+    "brand": "Imdur",
+    "dosage": ["30 mg", "60 mg", "120 mg (ER)"]
+  },
+  {
+    "name": "Nitroglycerin",
+    "brand": "Nitrostat, Nitro-Dur",
+    "dosage": ["0.3 mg, 0.4 mg, 0.6 mg (SL tabs); various patches/sprays"]
+  },
+  {
+    "name": "Baclofen",
+    "brand": "Lioresal",
+    "dosage": ["10 mg", "20 mg"]
+  },
+  {
+    "name": "Lamotrigine",
+    "brand": "Lamictal",
+    "dosage": ["various titration packs, 25 mg, 100 mg, 150 mg, 200 mg"]
+  },
+  {
+    "name": "Levetiracetam",
+    "brand": "Keppra",
+    "dosage": ["250 mg", "500 mg", "750 mg", "1000 mg"]
+  },
+  {
+    "name": "Phenytoin",
+    "brand": "Dilantin",
+    "dosage": ["100 mg (capsules); various suspensions/injectables"]
+  },
+  {
+    "name": "Divalproex Sodium",
+    "brand": "Depakote",
+    "dosage": ["125 mg", "250 mg", "500 mg (DR and ER)"]
+  },
+  {
+    "name": "Benztropine",
+    "brand": "Cogentin",
+    "dosage": ["0.5 mg", "1 mg", "2 mg"]
+  },
+  {
+    "name": "Meclizine",
+    "brand": "Antivert, Bonine",
+    "dosage": ["12.5 mg", "25 mg", "50 mg"]
+  },
+  {
+    "name": "Ropinirole",
+    "brand": "Requip",
+    "dosage": [
+      "various titration doses, e.g., 0.25 mg, 0.5 mg, 1 mg, up to 5 mg"
+    ]
+  },
+  {
+    "name": "Pramipexole",
+    "brand": "Mirapex",
+    "dosage": [
+      "various titration doses, e.g., 0.125 mg, 0.25 mg, 0.5 mg, up to 1.5 mg"
+    ]
+  },
+  {
+    "name": "Carbidopa/Levodopa",
+    "brand": "Sinemet",
+    "dosage": [
+      "various ratios and strengths, e.g., 10/100 mg, 25/100 mg, 25/250 mg"
+    ]
+  },
+  {
+    "name": "Amiodarone",
+    "brand": "Cordarone, Pacerone",
+    "dosage": ["100 mg", "200 mg", "400 mg"]
+  },
+  {
+    "name": "Digoxin",
+    "brand": "Lanoxin",
+    "dosage": [
+      "62.5 mcg (0.0625 mg)",
+      "125 mcg (0.125 mg)",
+      "250 mcg (0.25 mg)"
+    ]
+  },
+  {
+    "name": "Methylprednisolone",
+    "brand": "Medrol",
+    "dosage": ["4 mg, 8 mg, 16 mg, 32 mg (tablets); dose packs"]
+  },
+  {
+    "name": "Temazepam",
+    "brand": "Restoril",
+    "dosage": ["7.5 mg", "15 mg", "22.5 mg", "30 mg"]
+  },
+  {
+    "name": "Mirtazapine",
+    "brand": "Remeron",
+    "dosage": ["7.5 mg", "15 mg", "30 mg", "45 mg"]
+  },
+  {
+    "name": "Lithium Carbonate",
+    "brand": "Lithobid",
+    "dosage": [
+      "150 mg, 300 mg, 600 mg (capsules/tablets); 300 mg, 450 mg (ER tabs)"
+    ]
+  },
+  {
+    "name": "Adapalene",
+    "brand": "Differin",
+    "dosage": ["0.1%, 0.3% (gel/cream)"]
+  },
+  {
+    "name": "Clotrimazole/Betamethasone",
+    "brand": "Lotrisone",
+    "dosage": ["1%/0.05% cream"]
+  },
+  {
+    "name": "Nystatin",
+    "brand": "Mycostatin",
+    "dosage": ["various creams, ointments, powders, oral suspension"]
+  },
+  {
+    "name": "Terbinafine",
+    "brand": "Lamisil",
+    "dosage": ["250 mg (oral); 1% (topical cream)"]
+  },
+  {
+    "name": "Fluconazole",
+    "brand": "Diflucan",
+    "dosage": ["50 mg", "100 mg", "150 mg", "200 mg"]
+  },
+  {
+    "name": "Enalapril",
+    "brand": "Vasotec",
+    "dosage": ["2.5 mg", "5 mg", "10 mg", "20 mg"]
+  },
+  {
+    "name": "Ramipril",
+    "brand": "Altace",
+    "dosage": ["1.25 mg", "2.5 mg", "5 mg", "10 mg"]
+  },
+  {
+    "name": "Valsartan",
+    "brand": "Diovan",
+    "dosage": ["40 mg", "80 mg", "160 mg", "320 mg"]
+  },
+  {
+    "name": "Olmesartan",
+    "brand": "Benicar",
+    "dosage": ["5 mg", "20 mg", "40 mg"]
+  },
+  {
+    "name": "Irbesartan",
+    "brand": "Avapro",
+    "dosage": ["75 mg", "150 mg", "300 mg"]
+  },
+  {
+    "name": "Nebivolol",
+    "brand": "Bystolic",
+    "dosage": ["2.5 mg", "5 mg", "10 mg", "20 mg"]
+  },
+  {
+    "name": "Colchicine",
+    "brand": "Colcrys, Mitigare",
+    "dosage": ["0.6 mg"]
+  },
+  {
+    "name": "Sucralfate",
+    "brand": "Carafate",
+    "dosage": ["1 g (tablets); 1 g/10 mL (suspension)"]
+  },
+  {
+    "name": "Polyethylene Glycol 3350",
+    "brand": "MiraLAX",
+    "dosage": ["17 g/dose"]
+  },
+  {
+    "name": "Docusate Sodium",
+    "brand": "Colace",
+    "dosage": ["50 mg", "100 mg"]
+  },
+  {
+    "name": "Senna",
+    "brand": "Senokot",
+    "dosage": ["various, e.g., 8.6 mg sennosides"]
+  },
+  {
+    "name": "Bisacodyl",
+    "brand": "Dulcolax",
+    "dosage": ["5 mg (tablets); 10 mg (suppository)"]
+  },
+  {
+    "name": "Loperamide",
+    "brand": "Imodium",
+    "dosage": ["2 mg"]
+  },
+  {
+    "name": "Promethazine",
+    "brand": "Phenergan",
+    "dosage": ["12.5 mg", "25 mg", "50 mg"]
+  },
+  {
+    "name": "Guaifenesin",
+    "brand": "Mucinex, Robitussin",
+    "dosage": ["various IR/ER, e.g., 200 mg, 400 mg, 600 mg, 1200 mg"]
+  },
+  {
+    "name": "Dextromethorphan",
+    "brand": "Delsym, Robitussin DM",
+    "dosage": ["various, often in combination products"]
+  },
+  {
+    "name": "Benzonatate",
+    "brand": "Tessalon Perles",
+    "dosage": ["100 mg", "200 mg"]
+  },
+  {
+    "name": "Codeine/Guaifenesin",
+    "brand": "Robitussin AC, Cheratussin AC",
+    "dosage": ["various combinations, e.g., 10 mg/100 mg per 5 mL"]
+  },
+  {
+    "name": "Hydrocodone/Homatropine",
+    "brand": "Hycodan, Tussigon",
+    "dosage": ["various combinations"]
+  },
+  {
+    "name": "Fentanyl Transdermal",
+    "brand": "Duragesic",
+    "dosage": ["12 mcg/hr", "25 mcg/hr", "50 mcg/hr", "75 mcg/hr", "100 mcg/hr"]
+  },
+  {
+    "name": "Morphine Sulfate",
+    "brand": "MS Contin, Roxanol",
+    "dosage": [
+      "various IR and ER forms, e.g., 15 mg, 30 mg, 60 mg, 100 mg, 200 mg"
+    ]
+  },
+  {
+    "name": "Hydromorphone",
+    "brand": "Dilaudid",
+    "dosage": ["2 mg", "4 mg", "8 mg"]
+  },
+  {
+    "name": "Methadone",
+    "brand": "Dolophine, Methadose",
+    "dosage": ["5 mg", "10 mg", "40 mg"]
+  },
+  {
+    "name": "Buprenorphine/Naloxone",
+    "brand": "Suboxone",
+    "dosage": [
+      "various ratios/strengths, e.g., 2/0.5 mg, 4/1 mg, 8/2 mg, 12/3 mg (films/tablets)"
+    ]
+  },
+  {
+    "name": "Naltrexone",
+    "brand": "Revia, Vivitrol",
+    "dosage": ["50 mg (oral); 380 mg (injection)"]
+  },
+  {
+    "name": "Varenicline",
+    "brand": "Chantix",
+    "dosage": ["0.5 mg, 1 mg"]
+  },
+  {
+    "name": "Sildenafil",
+    "brand": "Viagra, Revatio",
+    "dosage": ["20 mg (Revatio); 25 mg, 50 mg, 100 mg (Viagra)"]
+  },
+  {
+    "name": "Tadalafil",
+    "brand": "Cialis, Adcirca",
+    "dosage": [
+      "2.5 mg, 5 mg (daily use); 10 mg, 20 mg (as needed); 20 mg (Adcirca)"
+    ]
+  },
+  {
+    "name": "Alendronate",
+    "brand": "Fosamax",
+    "dosage": ["5 mg, 10 mg (daily); 35 mg, 70 mg (weekly)"]
+  },
+  {
+    "name": "Risedronate",
+    "brand": "Actonel",
+    "dosage": [
+      "5 mg (daily); 35 mg (weekly); 75 mg (2 consecutive days/month); 150 mg (monthly)"
+    ]
+  },
+  {
+    "name": "Ibandronate",
+    "brand": "Boniva",
+    "dosage": ["150 mg (monthly oral); 3 mg (quarterly injection)"]
+  },
+  {
+    "name": "Zoledronic Acid",
+    "brand": "Reclast, Zometa",
+    "dosage": [
+      "5 mg (annual infusion for osteoporosis); 4 mg (for oncology indications)"
+    ]
+  },
+  {
+    "name": "Denosumab",
+    "brand": "Prolia, Xgeva",
+    "dosage": ["60 mg (Prolia - every 6 months); 120 mg (Xgeva - monthly)"]
+  },
+  {
+    "name": "Calcium Carbonate",
+    "brand": "Tums, Os-Cal",
+    "dosage": ["various, e.g., 500 mg, 600 mg elemental calcium"]
+  },
+  {
+    "name": "Calcium Citrate",
+    "brand": "Citracal",
+    "dosage": ["various, e.g., 200 mg, 315 mg elemental calcium"]
+  },
+  {
+    "name": "Vitamin D3 (Cholecalciferol)",
+    "brand": "various",
+    "dosage": ["400 IU, 800 IU, 1000 IU, 2000 IU, 5000 IU, 10000 IU, 50000 IU"]
+  },
+  {
+    "name": "Vitamin D2 (Ergocalciferol)",
+    "brand": "Drisdol",
+    "dosage": ["50000 IU"]
+  },
+  {
+    "name": "Folic Acid",
+    "brand": "various",
+    "dosage": ["400 mcg, 800 mcg, 1 mg (1000 mcg)"]
+  },
+  {
+    "name": "Cyanocobalamin (Vitamin B12)",
+    "brand": "various",
+    "dosage": ["various oral/sublingual/injectable, e.g., 1000 mcg"]
+  },
+  {
+    "name": "Ferrous Sulfate",
+    "brand": "Feosol",
+    "dosage": ["325 mg (65 mg elemental iron)"]
+  },
+  {
+    "name": "Omega-3 Acid Ethyl Esters",
+    "brand": "Lovaza",
+    "dosage": ["1 g capsules"]
+  },
+  {
+    "name": "Icosapent Ethyl",
+    "brand": "Vascepa",
+    "dosage": ["0.5 g, 1 g capsules"]
+  },
+  {
+    "name": "Fenofibrate",
+    "brand": "Tricor, Lofibra",
+    "dosage": ["various formulations, e.g., 48 mg, 54 mg, 145 mg, 160 mg"]
+  },
+  {
+    "name": "Gemfibrozil",
+    "brand": "Lopid",
+    "dosage": ["600 mg"]
+  },
+  {
+    "name": "Niacin (Extended Release)",
+    "brand": "Niaspan",
+    "dosage": ["500 mg", "750 mg", "1000 mg"]
+  },
+  {
+    "name": "Dorzolamide/Timolol",
+    "brand": "Cosopt",
+    "dosage": ["2%/0.5% eye drops"]
+  },
+  {
+    "name": "Brimonidine",
+    "brand": "Alphagan P",
+    "dosage": ["0.1%, 0.15% eye drops"]
+  },
+  {
+    "name": "Travoprost",
+    "brand": "Travatan Z",
+    "dosage": ["0.004% eye drops"]
+  },
+  {
+    "name": "Bimatoprost",
+    "brand": "Lumigan, Latisse",
+    "dosage": ["0.01%, 0.03% eye drops"]
+  },
+  {
+    "name": "Prednisolone Acetate (ophthalmic)",
+    "brand": "Pred Forte",
+    "dosage": ["1% eye drops"]
+  },
+  {
+    "name": "Ketorolac Tromethamine (ophthalmic)",
+    "brand": "Acular, Acuvail",
+    "dosage": ["0.4%, 0.5% eye drops"]
+  },
+  {
+    "name": "Cyclosporine Emulsion (ophthalmic)",
+    "brand": "Restasis",
+    "dosage": ["0.05% eye drops"]
+  },
+  {
+    "name": "Lifitegrast",
+    "brand": "Xiidra",
+    "dosage": ["5% eye drops"]
+  },
+  {
+    "name": "Moxifloxacin (ophthalmic)",
+    "brand": "Vigamox",
+    "dosage": ["0.5% eye drops"]
+  },
+  {
+    "name": "Ciprofloxacin (ophthalmic)",
+    "brand": "Ciloxan",
+    "dosage": ["0.3% eye drops/ointment"]
+  },
+  {
+    "name": "Ofloxacin (ophthalmic)",
+    "brand": "Ocuflox",
+    "dosage": ["0.3% eye drops"]
+  },
+  {
+    "name": "Tobramycin/Dexamethasone (ophthalmic)",
+    "brand": "Tobradex",
+    "dosage": ["0.3%/0.1% eye drops/ointment"]
+  },
+  {
+    "name": "Neomycin/Polymyxin B/Dexamethasone (ophthalmic)",
+    "brand": "Maxitrol",
+    "dosage": ["various strengths, eye drops/ointment"]
+  },
+  {
+    "name": "Hydrocortisone (topical)",
+    "brand": "various",
+    "dosage": ["0.5%, 1%, 2.5% cream/ointment"]
+  },
+  {
+    "name": "Triamcinolone Acetonide (topical)",
+    "brand": "Kenalog",
+    "dosage": ["0.025%, 0.1%, 0.5% cream/ointment"]
+  },
+  {
+    "name": "Mupirocin",
+    "brand": "Bactroban",
+    "dosage": ["2% ointment/cream"]
+  },
+  {
+    "name": "Nitrofurantoin Monohydrate/Macrocrystals",
+    "brand": "Macrobid",
+    "dosage": ["100 mg"]
+  },
+  {
+    "name": "Nitrofurantoin Macrocrystals",
+    "brand": "Macrodantin",
+    "dosage": ["50 mg", "100 mg"]
+  },
+  {
+    "name": "Mirabegron",
+    "brand": "Myrbetriq",
+    "dosage": ["25 mg", "50 mg"]
+  },
+  {
+    "name": "Oxybutynin",
+    "brand": "Ditropan",
+    "dosage": ["5 mg (IR); 5 mg, 10 mg, 15 mg (XL); 3.9 mg/day (patch)"]
+  },
+  {
+    "name": "Tolterodine",
+    "brand": "Detrol",
+    "dosage": ["1 mg, 2 mg (IR); 2 mg, 4 mg (LA)"]
+  },
+  {
+    "name": "Solifenacin",
+    "brand": "Vesicare",
+    "dosage": ["5 mg", "10 mg"]
+  },
+  {
+    "name": "Doxazosin",
+    "brand": "Cardura",
+    "dosage": ["1 mg", "2 mg", "4 mg", "8 mg"]
+  },
+  {
+    "name": "Terazosin",
+    "brand": "Hytrin",
+    "dosage": ["1 mg", "2 mg", "5 mg", "10 mg"]
+  },
+  {
+    "name": "Tizanidine",
+    "brand": "Zanaflex",
+    "dosage": ["2 mg", "4 mg"]
+  },
+  {
+    "name": "Orphenadrine",
+    "brand": "Norflex",
+    "dosage": ["100 mg ER"]
+  },
+  {
+    "name": "Carisoprodol",
+    "brand": "Soma",
+    "dosage": ["250 mg", "350 mg"]
+  },
+  {
+    "name": "Methocarbamol",
+    "brand": "Robaxin",
+    "dosage": ["500 mg", "750 mg"]
+  },
+  {
+    "name": "Liraglutide",
+    "brand": "Victoza, Saxenda",
+    "dosage": [
+      "various doses via pen injector, e.g., 0.6 mg, 1.2 mg, 1.8 mg (Victoza)"
+    ]
+  },
+  {
+    "name": "Semaglutide",
+    "brand": "Ozempic, Rybelsus, Wegovy",
+    "dosage": [
+      "various doses via pen injector or oral tablet, e.g., 0.25 mg, 0.5 mg, 1 mg, 2 mg (Ozempic/Wegovy SC); 3 mg, 7 mg, 14 mg (Rybelsus oral)"
+    ]
+  },
+  {
+    "name": "Dulaglutide",
+    "brand": "Trulicity",
+    "dosage": ["0.75 mg, 1.5 mg, 3 mg, 4.5 mg per pen injector"]
+  },
+  {
+    "name": "Empagliflozin",
+    "brand": "Jardiance",
+    "dosage": ["10 mg", "25 mg"]
+  },
+  {
+    "name": "Canagliflozin",
+    "brand": "Invokana",
+    "dosage": ["100 mg", "300 mg"]
+  },
+  {
+    "name": "Dapagliflozin",
+    "brand": "Farxiga",
+    "dosage": ["5 mg", "10 mg"]
+  },
+  {
+    "name": "Linagliptin",
+    "brand": "Tradjenta",
+    "dosage": ["5 mg"]
+  },
+  {
+    "name": "Saxagliptin",
+    "brand": "Onglyza",
+    "dosage": ["2.5 mg", "5 mg"]
+  },
+  {
+    "name": "Alogliptin",
+    "brand": "Nesina",
+    "dosage": ["6.25 mg", "12.5 mg", "25 mg"]
+  },
+  {
+    "name": "Indomethacin",
+    "brand": "Indocin",
+    "dosage": ["25 mg", "50 mg (IR); 75 mg (SR)"]
+  },
+  {
+    "name": "Celecoxib",
+    "brand": "Celebrex",
+    "dosage": ["50 mg", "100 mg", "200 mg", "400 mg"]
+  },
+  {
+    "name": "Desvenlafaxine",
+    "brand": "Pristiq",
+    "dosage": ["25 mg", "50 mg", "100 mg"]
+  },
+  {
+    "name": "Vilazodone",
+    "brand": "Viibryd",
+    "dosage": ["10 mg", "20 mg", "40 mg"]
+  },
+  {
+    "name": "Vortioxetine",
+    "brand": "Trintellix",
+    "dosage": ["5 mg", "10 mg", "20 mg"]
+  },
+  {
+    "name": "Aripiprazole",
+    "brand": "Abilify",
+    "dosage": ["2 mg", "5 mg", "10 mg", "15 mg", "20 mg", "30 mg"]
+  },
+  {
+    "name": "Lurasidone",
+    "brand": "Latuda",
+    "dosage": ["20 mg", "40 mg", "60 mg", "80 mg", "120 mg"]
+  },
+  {
+    "name": "Ziprasidone",
+    "brand": "Geodon",
+    "dosage": ["20 mg", "40 mg", "60 mg", "80 mg"]
+  },
+  {
+    "name": "Paliperidone",
+    "brand": "Invega",
+    "dosage": [
+      "1.5 mg",
+      "3 mg",
+      "6 mg",
+      "9 mg (ER tabs); various long-acting injections"
+    ]
+  },
+  {
+    "name": "Lisdexamfetamine",
+    "brand": "Vyvanse",
+    "dosage": ["10 mg", "20 mg", "30 mg", "40 mg", "50 mg", "60 mg", "70 mg"]
+  },
+  {
+    "name": "Dexmethylphenidate",
+    "brand": "Focalin",
+    "dosage": ["2.5 mg, 5 mg, 10 mg (IR); various XR capsules"]
+  },
+  {
+    "name": "Atomoxetine",
+    "brand": "Strattera",
+    "dosage": ["10 mg", "18 mg", "25 mg", "40 mg", "60 mg", "80 mg", "100 mg"]
+  },
+
+  {
+    "name": "Acetaminophen",
+    "brand": "Tylenol",
+    "dosage": ["various, e.g., 325 mg, 500 mg, 650 mg"]
+  },
+  {
+    "name": "Naproxen Sodium",
+    "brand": "Aleve",
+    "dosage": ["220 mg"]
+  },
+  {
+    "name": "Aspirin",
+    "brand": "Bayer, Ecotrin",
+    "dosage": ["various, e.g., 81 mg, 325 mg"]
+  },
+  {
+    "name": "Loratadine",
+    "brand": "Claritin, Alavert",
+    "dosage": ["10 mg"]
+  },
+  {
+    "name": "Cetirizine",
+    "brand": "Zyrtec Allergy",
+    "dosage": ["10 mg"]
+  },
+  {
+    "name": "Fexofenadine",
+    "brand": "Allegra Allergy",
+    "dosage": ["60 mg, 180 mg"]
+  },
+  {
+    "name": "Levocetirizine",
+    "brand": "Xyzal Allergy 24HR",
+    "dosage": ["5 mg"]
+  },
+  {
+    "name": "Diphenhydramine",
+    "brand": "Benadryl",
+    "dosage": ["25 mg"]
+  },
+  {
+    "name": "Chlorpheniramine",
+    "brand": "Chlor-Trimeton",
+    "dosage": ["4 mg"]
+  },
+  {
+    "name": "Dextromethorphan",
+    "brand": "Robitussin, Delsym",
+    "dosage": ["various, e.g., 10 mg, 15 mg per 5 mL"]
+  },
+  {
+    "name": "Guaifenesin",
+    "brand": "Mucinex, Robitussin Chest Congestion",
+    "dosage": ["various, e.g., 200 mg, 400 mg"]
+  },
+  {
+    "name": "Pseudoephedrine",
+    "brand": "Sudafed",
+    "dosage": ["30 mg, 60 mg"]
+  },
+  {
+    "name": "Phenylephrine",
+    "brand": "Sudafed PE, Neo-Synephrine",
+    "dosage": ["10 mg"]
+  },
+  {
+    "name": "Oxymetazoline",
+    "brand": "Afrin",
+    "dosage": ["0.05% nasal spray"]
+  },
+  {
+    "name": "Fluticasone Propionate (nasal)",
+    "brand": "Flonase Allergy Relief",
+    "dosage": ["50 mcg per spray"]
+  },
+  {
+    "name": "Triamcinolone Acetonide (nasal)",
+    "brand": "Nasacort Allergy 24HR",
+    "dosage": ["55 mcg per spray"]
+  },
+  {
+    "name": "Budesonide (nasal)",
+    "brand": "Rhinocort Allergy",
+    "dosage": ["32 mcg per spray"]
+  },
+  {
+    "name": "Cromolyn Sodium (nasal)",
+    "brand": "NasalCrom",
+    "dosage": ["nasal spray"]
+  },
+  {
+    "name": "Ketotifen (eye drops)",
+    "brand": "Alaway, Zaditor",
+    "dosage": ["0.025% solution"]
+  },
+  {
+    "name": "Olopatadine (eye drops)",
+    "brand": "Pataday",
+    "dosage": ["0.1%, 0.2% solution"]
+  },
+  {
+    "name": "Bismuth Subsalicylate",
+    "brand": "Pepto-Bismol",
+    "dosage": ["various, e.g., 262 mg tablets, liquid"]
+  },
+  {
+    "name": "Calcium Carbonate",
+    "brand": "Tums, Rolaids",
+    "dosage": ["various, e.g., 500 mg, 750 mg"]
+  },
+  {
+    "name": "Aluminum Hydroxide",
+    "brand": "Maalox, Mylanta",
+    "dosage": ["various"]
+  },
+  {
+    "name": "Magnesium Hydroxide",
+    "brand": "Milk of Magnesia, Mylanta",
+    "dosage": ["various"]
+  },
+  {
+    "name": "Simethicone",
+    "brand": "Gas-X, Mylanta",
+    "dosage": ["various, e.g., 80 mg, 125 mg"]
+  },
+  {
+    "name": "Loperamide",
+    "brand": "Imodium A-D",
+    "dosage": ["2 mg"]
+  },
+  {
+    "name": "Ranitidine",
+    "brand": "Zantac 360",
+    "dosage": ["75 mg, 150 mg"]
+  },
+  {
+    "name": "Famotidine",
+    "brand": "Pepcid AC",
+    "dosage": ["10 mg, 20 mg"]
+  },
+  {
+    "name": "Omeprazole",
+    "brand": "Prilosec OTC",
+    "dosage": ["20 mg"]
+  },
+  {
+    "name": "Lansoprazole",
+    "brand": "Prevacid 24HR",
+    "dosage": ["15 mg"]
+  },
+  {
+    "name": "Esomeprazole",
+    "brand": "Nexium 24HR",
+    "dosage": ["20 mg"]
+  },
+  {
+    "name": "Docusate Sodium",
+    "brand": "Colace",
+    "dosage": ["100 mg"]
+  },
+  {
+    "name": "Bisacodyl",
+    "brand": "Dulcolax",
+    "dosage": ["5 mg tablets, 10 mg suppositories"]
+  },
+  {
+    "name": "Polyethylene Glycol 3350",
+    "brand": "MiraLAX",
+    "dosage": ["various"]
+  },
+  {
+    "name": "Psyllium Husk",
+    "brand": "Metamucil",
+    "dosage": ["various"]
+  },
+  {
+    "name": "Sennosides",
+    "brand": "Senokot",
+    "dosage": ["various"]
+  },
+  {
+    "name": "Hydrocortisone (topical)",
+    "brand": "Cortizone-10",
+    "dosage": ["0.5%, 1% cream, ointment"]
+  },
+  {
+    "name": "Calamine Lotion",
+    "brand": "various",
+    "dosage": ["lotion"]
+  },
+  {
+    "name": "Neosporin (Bacitracin, Neomycin, Polymyxin B)",
+    "brand": "Neosporin",
+    "dosage": ["ointment"]
+  },
+  {
+    "name": "Triple Antibiotic Ointment",
+    "brand": "various",
+    "dosage": ["ointment"]
+  },
+  {
+    "name": "Lidocaine (topical)",
+    "brand": "various, e.g., Aspercreme",
+    "dosage": ["cream, patch"]
+  },
+  {
+    "name": "Benzoyl Peroxide (topical)",
+    "brand": "various, e.g., Clearasil",
+    "dosage": ["various, e.g., 2.5%, 5%, 10% wash, cream"]
+  },
+  {
+    "name": "Salicylic Acid (topical)",
+    "brand": "various, e.g., Compound W",
+    "dosage": ["various, e.g., liquid, pads"]
+  },
+  {
+    "name": "Docosanol (topical)",
+    "brand": "Abreva",
+    "dosage": ["10% cream"]
+  },
+  {
+    "name": "Artificial Tears",
+    "brand": "various, e.g., Refresh, Systane",
+    "dosage": ["eye drops"]
+  },
+  {
+    "name": "Mineral Oil (laxative)",
+    "brand": "various",
+    "dosage": ["oral liquid"]
+  },
+  {
+    "name": "Meclizine",
+    "brand": "Bonine",
+    "dosage": ["25 mg"]
+  },
+  {
+    "name": "Dimenhydrinate",
+    "brand": "Dramamine",
+    "dosage": ["various, e.g., 50 mg"]
+  },
+  {
+    "name": "Calcium Citrate",
+    "brand": "Citracal",
+    "dosage": ["various, e.g., 200 mg, 315 mg elemental calcium"]
+  },
+  {
+    "name": "Vitamin D3 (Cholecalciferol)",
+    "brand": "various",
+    "dosage": ["various, e.g., 400 IU, 1000 IU, 2000 IU"]
+  },
+  {
+    "name": "Multivitamins",
+    "brand": "various, e.g., One-A-Day, Centrum",
+    "dosage": ["various"]
+  },
+  {
+    "name": "Omega-3 Fatty Acids (Fish Oil)",
+    "brand": "various",
+    "dosage": ["various, e.g., 1000 mg"]
+  },
+  {
+    "name": "Melatonin",
+    "brand": "various",
+    "dosage": ["various, e.g., 3 mg, 5 mg, 10 mg"]
+  },
+  {
+    "name": "Probiotics (e.g., Lactobacillus, Bifidobacterium)",
+    "brand": "various, e.g., Culturelle, Florastor",
+    "dosage": ["various CFU"]
+  },
+  {
+    "name": "Ranitidine",
+    "brand": "Zantac 360",
+    "dosage": ["75 mg, 150 mg"]
+  },
+  {
+    "name": "Famotidine",
+    "brand": "Pepcid AC",
+    "dosage": ["10 mg, 20 mg"]
+  },
+  {
+    "name": "Cimetidine",
+    "brand": "Tagamet HB",
+    "dosage": ["200 mg"]
+  },
+  {
+    "name": "Sodium Bicarbonate",
+    "brand": "Alka-Seltzer",
+    "dosage": ["various"]
+  },
+  {
+    "name": "Magnesium Oxide",
+    "brand": "various",
+    "dosage": ["various, e.g., 400 mg"]
+  },
+  {
+    "name": "Ferrous Sulfate (Iron Supplement)",
+    "brand": "various, e.g., Feosol",
+    "dosage": ["various"]
+  },
+  {
+    "name": "Folic Acid (Vitamin B9)",
+    "brand": "various",
+    "dosage": ["various"]
+  },
+  {
+    "name": "Vitamin C (Ascorbic Acid)",
+    "brand": "various, e.g., Emergen-C",
+    "dosage": ["various, e.g., 500 mg, 1000 mg"]
+  },
+  {
+    "name": "Vitamin B12 (Cyanocobalamin)",
+    "brand": "various",
+    "dosage": ["various, e.g., 1000 mcg"]
+  },
+  {
+    "name": "Vitamin E",
+    "brand": "various",
+    "dosage": ["various IU"]
+  },
+  {
+    "name": "Zinc",
+    "brand": "various, e.g., Cold-Eeze",
+    "dosage": ["various mg"]
+  },
+  {
+    "name": "Dextromethorphan/Guaifenesin",
+    "brand": "Mucinex DM, Robitussin DM",
+    "dosage": ["various"]
+  },
+  {
+    "name": "Pseudoephedrine/Loratadine",
+    "brand": "Claritin-D",
+    "dosage": ["various"]
+  },
+  {
+    "name": "Pseudoephedrine/Cetirizine",
+    "brand": "Zyrtec-D",
+    "dosage": ["various"]
+  },
+  {
+    "name": "Pseudoephedrine/Fexofenadine",
+    "brand": "Allegra-D",
+    "dosage": ["various"]
+  },
+  {
+    "name": "Diphenhydramine Citrate",
+    "brand": "ZzzQuil",
+    "dosage": ["25 mg (sleep aid)"]
+  },
+  {
+    "name": "Doxylamine Succinate",
+    "brand": "Unisom SleepTabs",
+    "dosage": ["25 mg (sleep aid)"]
+  },
+  {
+    "name": "Polyvinyl Alcohol (eye drops)",
+    "brand": "various, e.g., Visine Tears",
+    "dosage": ["various"]
+  },
+  {
+    "name": "Povidone-Iodine (topical antiseptic)",
+    "brand": "Betadine",
+    "dosage": ["various solutions, ointments"]
+  },
+  {
+    "name": "Isopropyl Alcohol (rubbing alcohol)",
+    "brand": "various",
+    "dosage": ["various concentrations"]
+  },
+  {
+    "name": "Hydrogen Peroxide (topical antiseptic)",
+    "brand": "various",
+    "dosage": ["various solutions"]
+  },
+  {
+    "name": "Witch Hazel (topical astringent)",
+    "brand": "various, e.g., Tucks",
+    "dosage": ["various pads, liquids"]
+  },
+  {
+    "name": "Phenylephrine (nasal spray)",
+    "brand": "Neo-Synephrine",
+    "dosage": ["various concentrations"]
+  },
+  {
+    "name": "Sodium Chloride (nasal spray)",
+    "brand": "various, e.g., Ocean Spray",
+    "dosage": ["various concentrations"]
+  },
+  {
+    "name": "Cough Drops (various ingredients like menthol, benzocaine)",
+    "brand": "various, e.g., Halls, Cepacol",
+    "dosage": ["various"]
+  },
+  {
+    "name": "Sore Throat Lozenges/Sprays (various ingredients like benzocaine, phenol)",
+    "brand": "various, e.g., Chloraseptic, Cepacol",
+    "dosage": ["various"]
+  },
+  {
+    "name": "First Aid Antibiotic Ointment (Bacitracin)",
+    "brand": "various",
+    "dosage": ["ointment"]
+  },
+  {
+    "name": "Hydrocortisone Acetate (topical)",
+    "brand": "various",
+    "dosage": ["various creams, ointments"]
+  },
+  {
+    "name": "Miconazole Nitrate (antifungal topical)",
+    "brand": "Monistat-Derm, Micatin",
+    "dosage": ["various creams, powders, sprays"]
+  },
+  {
+    "name": "Clotrimazole (antifungal topical)",
+    "brand": "Lotrimin AF, Gyne-Lotrimin",
+    "dosage": ["various creams, powders, sprays"]
+  },
+  {
+    "name": "Tolnaftate (antifungal topical)",
+    "brand": "Tinactin",
+    "dosage": ["various creams, powders, sprays"]
+  },
+  {
+    "name": "Aluminum Acetate (Domeboro)",
+    "brand": "Domeboro",
+    "dosage": ["powder packets for solution"]
+  },
+  {
+    "name": "Pramoxine (topical anesthetic)",
+    "brand": "various, e.g., Caladryl",
+    "dosage": ["various creams, lotions"]
+  },
+  {
+    "name": "Dibucaine (topical anesthetic)",
+    "brand": "Nupercainal",
+    "dosage": ["various creams, ointments"]
+  },
+  {
+    "name": "Petrolatum (topical protectant)",
+    "brand": "Vaseline",
+    "dosage": ["various ointments, lotions"]
+  },
+  {
+    "name": "Zinc Oxide (topical protectant)",
+    "brand": "Desitin",
+    "dosage": ["various ointments, creams"]
+  },
+  {
+    "name": "Calamine",
+    "brand": "Caladryl",
+    "dosage": ["lotion"]
+  },
+  {
+    "name": "Magnesium Citrate (saline laxative)",
+    "brand": "various",
+    "dosage": ["oral solution"]
+  }
+]
