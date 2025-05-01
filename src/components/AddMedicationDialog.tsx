@@ -7,10 +7,10 @@ import {
   TextField,
   Button,
   Autocomplete,
-  createFilterOptions, // Import createFilterOptions
+  createFilterOptions,
 } from '@mui/material'
 import { useAppContext } from '../contexts/AppContext'
-import medicationsData from '../data/medications.json' // Import medication data
+import medicationsData from '../data/medications.json'
 
 interface AddMedicationDialogProps {
   open: boolean
@@ -31,7 +31,6 @@ const AddMedicationDialog: React.FC<AddMedicationDialogProps> = ({
   } | null>(null)
   const [medicationNameInput, setMedicationNameInput] = useState('')
   const [dose, setDose] = useState('')
-  // Removed frequency state
 
   const handleAddMedication = async () => {
     if (selectedMedication && dose.trim() !== '' && profileId !== null) {
@@ -39,25 +38,21 @@ const AddMedicationDialog: React.FC<AddMedicationDialogProps> = ({
         profileId: profileId,
         name: selectedMedication.name,
         dose: dose.trim(),
-        // Removed frequency from addMedication call
       })
       setSelectedMedication(null)
       setMedicationNameInput('')
       setDose('')
-      // Removed frequency reset
       onClose()
     }
   }
 
-  // Filter options for medication Autocomplete
   const filterOptions = createFilterOptions<{
     name: string
     brand: string
     dosage: string[]
   }>({
-    limit: 10, // Limit to 10 suggestions
-    matchFrom: 'any', // Match anywhere in the string
-    // Stringify the option to include both name and brand for searching
+    limit: 10,
+    matchFrom: 'any',
     stringify: (option) => `${option.name} ${option.brand}`,
   })
 
@@ -69,19 +64,19 @@ const AddMedicationDialog: React.FC<AddMedicationDialogProps> = ({
       <DialogTitle>Add New Medication</DialogTitle>
       <DialogContent>
         <Autocomplete
-          options={medicationNameInput ? medicationsData : []} // Show options only when typing
-          filterOptions={filterOptions} // Apply custom filtering
+          options={medicationNameInput ? medicationsData : []}
+          filterOptions={filterOptions}
           getOptionLabel={(option) => option.name}
           value={selectedMedication}
           onChange={(
-            event: React.SyntheticEvent,
+            _event: React.SyntheticEvent,
             newValue: { name: string; brand: string; dosage: string[] } | null
           ) => {
             setSelectedMedication(newValue)
           }}
           inputValue={medicationNameInput}
           onInputChange={(
-            event: React.SyntheticEvent,
+            _event: React.SyntheticEvent,
             newInputValue: string
           ) => {
             setMedicationNameInput(newInputValue)
@@ -101,7 +96,7 @@ const AddMedicationDialog: React.FC<AddMedicationDialogProps> = ({
           options={selectedMedication ? selectedMedication.dosage : []}
           getOptionLabel={(option) => option}
           value={dose}
-          onChange={(event: React.SyntheticEvent, newValue: string | null) => {
+          onChange={(_event: React.SyntheticEvent, newValue: string | null) => {
             setDose(newValue || '')
           }}
           renderInput={(params) => (
@@ -113,15 +108,14 @@ const AddMedicationDialog: React.FC<AddMedicationDialogProps> = ({
               sx={{ mb: 2 }}
             />
           )}
-          disabled={!selectedMedication} // Disable dose until medication is selected
+          disabled={!selectedMedication}
         />
-        {/* Removed Frequency TextField */}
       </DialogContent>
       <DialogActions>
         <Button onClick={onClose}>Cancel</Button>
         <Button
           onClick={handleAddMedication}
-          disabled={!selectedMedication || dose.trim() === ''} // Removed frequency check
+          disabled={!selectedMedication || dose.trim() === ''}
         >
           Add
         </Button>
