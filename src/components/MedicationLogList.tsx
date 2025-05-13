@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
   List,
   ListItem,
@@ -6,16 +6,27 @@ import {
   Typography,
   Box,
   Button,
-} from '@mui/material'
+  Dialog, DialogTitle, DialogContent, DialogActions, TextField } from '@mui/material'
 import { useAppContext } from '../contexts/AppContext'
+import { db } from '../db/db'
 
 const MedicationLogList: React.FC = () => {
+  const [editLogId, setEditLogId] = useState<number | null>(null);
+  const [newTime, setNewTime] = useState<string>('');
   const { selectedMedicationId, getLogsForMedication, logMedicationTaken } =
     useAppContext()
 
   const medicationLogs = selectedMedicationId
     ? getLogsForMedication(selectedMedicationId)
     : undefined
+
+  const handleEditLogTime = async () => {
+    if (editLogId !== null) {
+      const newTimestamp = new Date(newTime).getTime();
+      await db.updateMedicationTime(editLogId, newTimestamp);
+      setEditLogId(null);
+    }
+  };
 
   const handleLogTaken = () => {
     if (selectedMedicationId !== null) {
@@ -46,26 +57,46 @@ const MedicationLogList: React.FC = () => {
       {medicationLogs.length === 0 ? (
         <Typography>No logs yet.</Typography>
       ) : (
-        <List>
-          {medicationLogs.map((log) => (
-            <ListItem key={log.id}>
-              <ListItemText
-                primary={`Taken at: ${new Date(
-                  log.timestamp
-                ).toLocaleString()}`}
+        <>
+          <List>
+            {medicationLogs.map((log) => (
+              <ListItem key={log.id}>
+                <Button onClick={() => log.id !== undefined ? setEditLogId(log.id) : null}>Edit Time</Button>
+                <ListItemText
+                  primary={`Taken at: ${new Date(log.timestamp).toLocaleString()}`}
+                />
+              </ListItem>
+            ))}
+          </List>
+
+          <Dialog open={editLogId !== null} onClose={() => setEditLogId(null)}>
+            <DialogTitle>Edit Medication Time</DialogTitle>
+            <DialogContent>
+              <TextField
+                label="New Time"
+                type="datetime-local"
+                value={newTime}
+                onChange={(e) => setNewTime(e.target.value)}
+                fullWidth
               />
-            </ListItem>
-          ))}
-        </List>
+            </DialogContent>
+            <DialogActions>
+              <Button onClick={() => setEditLogId(null)}>Cancel</Button>
+              <Button onClick={handleEditLogTime} color="primary">
+                Save
+              </Button>
+            </DialogActions>
+          </Dialog>
+          <Button
+            variant='contained'
+            color='primary'
+            onClick={handleLogTaken}
+            sx={{ mt: 2 }}
+          >
+            Log Taken
+          </Button>
+        </>
       )}
-      <Button
-        variant='contained'
-        color='primary'
-        onClick={handleLogTaken}
-        sx={{ mt: 2 }}
-      >
-        Log Taken
-      </Button>
     </Box>
   )
 }

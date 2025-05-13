@@ -48,7 +48,12 @@ export class PillTrackerDB extends Dexie {
     this.medications = this.table('medications')
     this.medicationLog = this.table('medicationLog')
   }
+
+  // 3. Add a method to update the timestamp in the MedicationLog table
+  async updateMedicationTime(logId: number, newTimestamp: number): Promise<void> {
+    await this.medicationLog.update(logId, { timestamp: newTimestamp });
+  }
 }
 
-// 3. Export a singleton instance
+// 4. Export a singleton instance
 export const db = new PillTrackerDB()

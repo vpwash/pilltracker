@@ -14,7 +14,7 @@ import ProfileList from './components/ProfileList' // Import ProfileList
 import AddProfileDialog from './components/AddProfileDialog' // Import AddProfileDialog
 import MedicationList from './components/MedicationList' // Import MedicationList
 import AddMedicationDialog from './components/AddMedicationDialog' // Import AddMedicationDialog
-import MedicationLogList from './components/MedicationLogList' // Import MedicationLogList
+// MedicationLogList import removed
 import EditMedicationDialog from './components/EditMedicationDialog' // Import EditMedicationDialog
 
 // Basic theme (can be customized later)
@@ -88,8 +88,7 @@ function App() {
             onEditMedicationClick={() => setEditMedicationDialogOpen(true)} // Pass function to open edit dialog
           />{' '}
           {/* Add MedicationList component and pass prop */}
-          {selectedMedicationId && <MedicationLogList />}{' '}
-          {/* Conditionally render MedicationLogList */}
+          {/* MedicationLogList component removed */}
         </Container>
         <Box
           component='footer'
