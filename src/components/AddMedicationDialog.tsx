@@ -32,17 +32,48 @@ const AddMedicationDialog: React.FC<AddMedicationDialogProps> = ({
   const [medicationNameInput, setMedicationNameInput] = useState('')
   const [dose, setDose] = useState('')
 
+
   const handleAddMedication = async () => {
-    if (selectedMedication && dose.trim() !== '' && profileId !== null) {
-      await addMedication({
-        profileId: profileId,
-        name: selectedMedication.name,
-        dose: dose.trim(),
-      })
-      setSelectedMedication(null)
-      setMedicationNameInput('')
-      setDose('')
-      onClose()
+    // Only use default dose if the field is truly empty
+    const currentDose = dose.trim() === '' ? 'none' : dose;
+    
+    console.log('Adding medication - detailed check:', { 
+      medicationNameInput: medicationNameInput,
+      medicationNameTrimmed: medicationNameInput.trim(),
+      dose: currentDose,
+      profileId: profileId,
+      profileIdType: typeof profileId,
+      allFieldsPresent: medicationNameInput.trim() !== '' && currentDose !== '' && profileId !== null
+    });
+    
+    if (medicationNameInput.trim() !== '' && profileId !== null) {
+      try {
+        const medicationToAdd = {
+          profileId: profileId,
+          name: medicationNameInput.trim(),
+          dose: currentDose,
+        };
+        
+        console.log('About to add medication with data:', medicationToAdd);
+        
+        const result = await addMedication(medicationToAdd);
+        
+        console.log('Medication added with result:', result);
+        
+        // Clear inputs and close dialog
+        setSelectedMedication(null);
+        setMedicationNameInput('');
+        setDose('');
+        onClose();
+      } catch (error) {
+        console.error('Error adding medication:', error);
+      }
+    } else {
+      console.warn('Cannot add medication: missing required fields', { 
+        medicationName: medicationNameInput.trim(), 
+        dose: dose.trim(), 
+        profileId 
+      });
     }
   }
 
@@ -63,16 +94,29 @@ const AddMedicationDialog: React.FC<AddMedicationDialogProps> = ({
     >
       <DialogTitle>Add New Medication</DialogTitle>
       <DialogContent>
+
         <Autocomplete
+          freeSolo
           options={medicationNameInput ? medicationsData : []}
           filterOptions={filterOptions}
-          getOptionLabel={(option) => option.name}
+          getOptionKey={(option) => typeof option === 'string' ? option : `${option.name}-${option.brand}`}
+          getOptionLabel={(option) => typeof option === 'string' ? option : option.name}
           value={selectedMedication}
           onChange={(
             _event: React.SyntheticEvent,
-            newValue: { name: string; brand: string; dosage: string[] } | null
+            newValue: string | { name: string; brand: string; dosage: string[] } | null
           ) => {
-            setSelectedMedication(newValue)
+            if (typeof newValue === 'string') {
+              setSelectedMedication({ name: newValue, brand: '', dosage: [] })
+              // Ensure medicationNameInput is updated when a string is selected
+              setMedicationNameInput(newValue)
+            } else {
+              setSelectedMedication(newValue)
+              // Update medicationNameInput when an option is selected
+              if (newValue) {
+                setMedicationNameInput(newValue.name)
+              }
+            }
           }}
           inputValue={medicationNameInput}
           onInputChange={(
@@ -93,11 +137,17 @@ const AddMedicationDialog: React.FC<AddMedicationDialogProps> = ({
           )}
         />
         <Autocomplete
+          freeSolo
           options={selectedMedication ? selectedMedication.dosage : []}
-          getOptionLabel={(option) => option}
+          getOptionLabel={(option) => typeof option === 'string' ? option : option}
           value={dose}
           onChange={(_event: React.SyntheticEvent, newValue: string | null) => {
+            console.log('Dose changed to:', newValue);
             setDose(newValue || '')
+          }}
+          onInputChange={(_event, newInputValue) => {
+            console.log('Dose input changed to:', newInputValue);
+            setDose(newInputValue);
           }}
           renderInput={(params) => (
             <TextField
@@ -108,14 +158,14 @@ const AddMedicationDialog: React.FC<AddMedicationDialogProps> = ({
               sx={{ mb: 2 }}
             />
           )}
-          disabled={!selectedMedication}
+          disabled={!medicationNameInput}
         />
       </DialogContent>
       <DialogActions>
         <Button onClick={onClose}>Cancel</Button>
         <Button
           onClick={handleAddMedication}
-          disabled={!selectedMedication || dose.trim() === ''}
+          disabled={false}
         >
           Add
         </Button>

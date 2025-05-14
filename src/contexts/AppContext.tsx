@@ -117,13 +117,20 @@ export const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
   const addMedication = useCallback(
     async (medication: Omit<Medication, 'id' | 'frequency'>) => {
       // Remove frequency from type
+      console.log('AppContext: Received medication data:', medication);
+      
       if (medication.profileId === null) {
         console.error('Cannot add medication without a selected profile.')
         return undefined
       }
+      
       try {
-        const id = await db.medications.add(medication as Medication) // Add profileId before calling
-        console.log(`Medication added with id: ${id}`)
+        console.log('AppContext: About to add medication to database:', medication);
+        const medicationToAdd = medication as Medication;
+        console.log('AppContext: Converted medication object:', medicationToAdd);
+        
+        const id = await db.medications.add(medicationToAdd)
+        console.log(`Medication added with id: ${id}, full data:`, medicationToAdd)
         return id
       } catch (error) {
         console.error('Failed to add medication:', error)
