@@ -1,0 +1,275 @@
+import React from 'react';
+import { Bar } from 'react-chartjs-2';
+import { 
+  Chart as ChartJS, 
+  CategoryScale, 
+  LinearScale, 
+  BarElement, 
+  Title, 
+  Tooltip, 
+  Legend,
+  ChartOptions,
+  TooltipModel,
+  TooltipItem
+} from 'chart.js';
+import { Box, Typography, Select, MenuItem, FormControl, InputLabel, SelectChangeEvent } from '@mui/material';
+import { useAppContext } from '../contexts/AppContext';
+
+// Register ChartJS components
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+);
+
+interface MedicationDoseData {
+  date: string;
+  count: number;
+  doses: string[];
+}
+
+const MedicationHistory: React.FC = () => {
+  const { 
+    historicalMedicationData, 
+    selectedProfileId, 
+    profiles, 
+    selectProfile 
+  } = useAppContext();
+
+  const handleProfileChange = (event: SelectChangeEvent<number>) => {
+    const newProfileId = event.target.value as number;
+    selectProfile(newProfileId);
+  };
+
+  if (!selectedProfileId) {
+    return (
+      <Box sx={{ mt: 2, p: 2 }}>
+        <Typography variant="h6" gutterBottom>
+          Select a profile to view medication history
+        </Typography>
+        {profiles && profiles.length > 0 ? (
+          <FormControl fullWidth sx={{ mt: 2, maxWidth: 400 }}>
+            <InputLabel id="profile-select-label">Select Profile</InputLabel>
+            <Select
+              labelId="profile-select-label"
+              value={profiles[0]?.id || ''}
+              onChange={handleProfileChange}
+              label="Select Profile"
+            >
+              {profiles.map((profile) => (
+                <MenuItem key={profile.id} value={profile.id}>
+                  {profile.name}
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
+        ) : (
+          <Typography>No profiles available. Please create a profile first.</Typography>
+        )}
+      </Box>
+    );
+  }
+
+  if (!historicalMedicationData || historicalMedicationData.length === 0) {
+    return (
+      <Box sx={{ mt: 2, p: 2 }}>
+        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 3 }}>
+          <Typography variant="h5" component="h2">
+            Medication History
+          </Typography>
+          <FormControl sx={{ minWidth: 200 }} size="small">
+            <InputLabel id="profile-selector-label">Profile</InputLabel>
+            <Select
+              labelId="profile-selector-label"
+              value={selectedProfileId}
+              onChange={handleProfileChange}
+              label="Profile"
+            >
+              {profiles?.map((profile) => (
+                <MenuItem key={profile.id} value={profile.id}>
+                  {profile.name}
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
+        </Box>
+        <Typography>
+          No medication history found for the selected profile.
+          <br />
+          <br />
+          Try taking some medications first by clicking the 'Take' button on the Current Medications tab.
+        </Typography>
+      </Box>
+    );
+  }
+
+  // Process data for the chart
+  const medications = Array.from(new Set(historicalMedicationData.map(log => log.medicationName)));
+  const allDates = Array.from(new Set(historicalMedicationData.map(log => 
+    new Date(log.timestamp).toLocaleDateString()
+  ))).sort((a, b) => new Date(a).getTime() - new Date(b).getTime());
+
+  // Group data by medication and date
+  const medicationData = medications.map(medName => {
+    const medLogs = historicalMedicationData.filter(log => log.medicationName === medName);
+    const dateMap = new Map<string, {count: number, doses: string[]}>();
+    
+    medLogs.forEach(log => {
+      const date = new Date(log.timestamp).toLocaleDateString();
+      if (!dateMap.has(date)) {
+        dateMap.set(date, { count: 0, doses: [] });
+      }
+      const dateData = dateMap.get(date)!;
+      dateData.count += 1;
+      dateData.doses.push(log.medicationDose);
+    });
+
+    return {
+      label: medName,
+      data: allDates.map(date => dateMap.get(date)?.count || 0),
+      doses: allDates.map(date => dateMap.get(date)?.doses || []),
+    };
+  });
+
+  const chartData = {
+    labels: allDates,
+    datasets: medicationData.map((med, index) => ({
+      label: med.label,
+      data: med.data,
+      backgroundColor: `hsl(${(index * 360) / medications.length}, 70%, 50%)`,
+      borderColor: `hsl(${(index * 360) / medications.length}, 70%, 40%)`,
+      borderWidth: 1,
+    }))
+  };
+
+  const options: ChartOptions<'bar'> = {
+    responsive: true,
+    maintainAspectRatio: false,
+    scales: {
+      x: {
+        title: {
+          display: true,
+          text: 'Date',
+          font: {
+            weight: 'bold',
+          },
+        },
+        grid: {
+          display: true,
+          color: 'rgba(0, 0, 0, 0.05)',
+        },
+      },
+      y: {
+        title: {
+          display: true,
+          text: 'Number of Times Taken',
+          font: {
+            weight: 'bold',
+          },
+        },
+        beginAtZero: true,
+        ticks: {
+          precision: 0,
+          stepSize: 1,
+        },
+        grid: {
+          display: true,
+          color: 'rgba(0, 0, 0, 0.05)',
+        },
+      },
+    },
+    plugins: {
+      title: {
+        display: true,
+        text: 'Medication Intake by Date',
+        font: {
+          size: 18,
+          weight: 'bold',
+        },
+        padding: {
+          top: 10,
+          bottom: 20,
+        },
+      },
+      legend: {
+        position: 'top',
+        labels: {
+          padding: 20,
+          usePointStyle: true,
+          pointStyle: 'rect',
+        },
+      },
+      tooltip: {
+        backgroundColor: 'rgba(0, 0, 0, 0.9)',
+        titleFont: {
+          size: 14,
+          weight: 'bold',
+        },
+        bodyFont: {
+          size: 13,
+        },
+        padding: 12,
+        callbacks: {
+          label: function(context) {
+            const label = context.dataset.label || '';
+            const value = context.parsed.y;
+            const doses = medicationData[context.datasetIndex].doses[context.dataIndex] || [];
+            
+            if (doses.length === 0) return [];
+            
+            const doseCounts = doses.reduce((acc: Record<string, number>, dose: string) => {
+              acc[dose] = (acc[dose] || 0) + 1;
+              return acc;
+            }, {} as Record<string, number>);
+            
+            const doseText = Object.entries(doseCounts)
+              .map(([dose, count]) => 
+                count > 1 
+                  ? `${count} × ${dose}` 
+                  : dose
+              )
+              .join(', ');
+            
+            return [
+              `${label}: ${value} time${value !== 1 ? 's' : ''}`,
+              `Doses: ${doseText}`
+            ];
+          },
+        },
+      },
+    },
+  };
+
+  return (
+    <Box sx={{ p: 2, height: '100%', display: 'flex', flexDirection: 'column' }}>
+      <Box sx={{ mb: 3, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <Typography variant="h5" component="h2">
+          Medication History
+        </Typography>
+        <FormControl sx={{ minWidth: 200 }} size="small">
+          <InputLabel id="profile-selector-label">Profile</InputLabel>
+          <Select
+            labelId="profile-selector-label"
+            value={selectedProfileId}
+            onChange={handleProfileChange}
+            label="Profile"
+          >
+            {profiles?.map((profile) => (
+              <MenuItem key={profile.id} value={profile.id}>
+                {profile.name}
+              </MenuItem>
+            ))}
+          </Select>
+        </FormControl>
+      </Box>
+      <Box sx={{ flex: 1, minHeight: '400px' }}>
+        <Bar options={options} data={chartData} />
+      </Box>
+    </Box>
+  );
+};
+
+export default MedicationHistory;

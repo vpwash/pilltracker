@@ -8,6 +8,7 @@ import React, {
 } from 'react'
 import { useLiveQuery } from 'dexie-react-hooks'
 import { db, Profile, Medication, MedicationLog } from '../db/db'
+import type { HistoricalMedicationLog } from '../types';
 
 // Define the shape of the context data
 interface AppContextType {
@@ -26,7 +27,8 @@ interface AppContextType {
   updateMedication: (medication: Medication) => Promise<number | undefined>
   deleteMedication: (medicationId: number) => Promise<void>
   logMedicationTaken: (medicationId: number) => Promise<number | undefined>
-  getLogsForMedication: (medicationId: number) => MedicationLog[] | undefined
+  getLogsForMedication: (medicationId: number) => MedicationLog[] | undefined;
+  historicalMedicationData: HistoricalMedicationLog[];
   // addProfile: (name: string) => Promise<number | undefined> // Moved to inside the provider
 }
 
@@ -236,6 +238,44 @@ export const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
     [selectedProfileMedications, logMedicationTaken] // Re-run when medications change or log function potentially involved
   )
 
+  // Combine medication details with logs for historical view
+  const historicalMedicationData = useMemo(() => {
+    console.log('Calculating historicalMedicationData');
+    console.log('selectedProfileMedications:', selectedProfileMedications);
+    console.log('medicationLogs:', medicationLogs);
+    
+    if (!selectedProfileMedications || !medicationLogs) {
+      console.log('Missing data for historical view:', { 
+        hasMedications: !!selectedProfileMedications, 
+        hasLogs: !!medicationLogs 
+      });
+      return [];
+    }
+
+    const historicalData: HistoricalMedicationLog[] = [];
+    selectedProfileMedications.forEach(medication => {
+      console.log('Processing medication:', medication);
+      const logs = medicationLogs.get(medication.id!);
+      console.log(`Logs for medication ${medication.name}:`, logs);
+      
+      if (logs && logs.length > 0) {
+        logs.forEach(log => {
+          historicalData.push({
+            logId: log.id!,
+            medicationId: medication.id!,
+            medicationName: medication.name,
+            medicationDose: medication.dose,
+            timestamp: log.timestamp,
+          });
+        });
+      }
+    });
+    
+    console.log('Final historicalData:', historicalData);
+    // Sort by timestamp descending (most recent first)
+    return historicalData.sort((a, b) => b.timestamp - a.timestamp);
+  }, [selectedProfileMedications, medicationLogs]);
+
   const getLogsForMedication = useCallback(
     (medicationId: number) => {
       return medicationLogs?.get(medicationId)
@@ -260,6 +300,7 @@ export const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
       deleteMedication,
       logMedicationTaken,
       getLogsForMedication,
+      historicalMedicationData,
     }),
     [
       profiles,
@@ -276,6 +317,7 @@ export const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
       deleteMedication,
       logMedicationTaken,
       getLogsForMedication,
+      historicalMedicationData,
     ] // Ensure logMedicationTaken is included if it's added above
   )
 

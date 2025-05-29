@@ -9,6 +9,8 @@ import {
   Typography,
   Box,
   Button,
+  Tabs,
+  Tab,
 } from '@mui/material'
 import ProfileList from './components/ProfileList' // Import ProfileList
 import AddProfileDialog from './components/AddProfileDialog' // Import AddProfileDialog
@@ -25,6 +27,40 @@ const theme = createTheme({
 })
 
 import { useAppContext } from './contexts/AppContext'
+import MedicationHistory from './components/MedicationHistory' // Import MedicationHistory
+
+interface TabPanelProps {
+  children?: React.ReactNode;
+  index: number;
+  value: number;
+}
+
+function TabPanel(props: TabPanelProps) {
+  const { children, value, index, ...other } = props;
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box sx={{ p: 3 }}>
+          {children}
+        </Box>
+      )}
+    </div>
+  );
+}
+
+function a11yProps(index: number) {
+  return {
+    id: `simple-tab-${index}`,
+    'aria-controls': `simple-tabpanel-${index}`,
+  };
+}
 
 function App() {
   const [addProfileDialogOpen, setAddProfileDialogOpen] = React.useState(false)
@@ -32,6 +68,11 @@ function App() {
     React.useState(false)
   const [editMedicationDialogOpen, setEditMedicationDialogOpen] =
     React.useState(false)
+  const [currentTab, setCurrentTab] = React.useState(0);
+
+  const handleTabChange = (event: React.SyntheticEvent, newValue: number) => {
+    setCurrentTab(newValue);
+  };
 
   const {
     selectedProfileId,
@@ -69,27 +110,36 @@ function App() {
             </Button>
           </Toolbar>
         </AppBar>
-        <Container
-          component='main'
-          sx={{ mt: 4, mb: 4, flexGrow: 1 }}
-        >
-          {/* Main content area - Components will go here */}
-          <Typography
-            variant='h4'
-            component='h1'
-            gutterBottom
+        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+            <Tabs value={currentTab} onChange={handleTabChange} aria-label="basic tabs example">
+              <Tab label="Current Medications" {...a11yProps(0)} />
+              <Tab label="Medication History" {...a11yProps(1)} />
+            </Tabs>
+          </Box>
+        <TabPanel value={currentTab} index={0}>
+          <Container
+            component='main'
+            sx={{ flexGrow: 1 }}
           >
-            Welcome to Pill Tracker
-          </Typography>
-          <Typography>Manage profiles and track medications easily.</Typography>
-          <ProfileList /> {/* Add ProfileList component */}
-          <MedicationList
-            onAddMedicationClick={() => setAddMedicationDialogOpen(true)}
-            onEditMedicationClick={() => setEditMedicationDialogOpen(true)} // Pass function to open edit dialog
-          />{' '}
-          {/* Add MedicationList component and pass prop */}
-          {/* MedicationLogList component removed */}
-        </Container>
+            {/* Main content area - Components will go here */}
+            {/* Welcome message removed as it's now part of the tab content */}
+            <ProfileList /> {/* Add ProfileList component */}
+            <MedicationList
+              onAddMedicationClick={() => setAddMedicationDialogOpen(true)}
+              onEditMedicationClick={() => setEditMedicationDialogOpen(true)} // Pass function to open edit dialog
+            />{' '}
+            {/* Add MedicationList component and pass prop */}
+            {/* MedicationLogList component removed */}
+          </Container>
+        </TabPanel>
+        <TabPanel value={currentTab} index={1}>
+          <Container
+            component='main'
+            sx={{ flexGrow: 1 }}
+          >
+            <MedicationHistory />
+          </Container>
+        </TabPanel>
         <Box
           component='footer'
           sx={{
