@@ -8,7 +8,7 @@ import {
   Button,
 } from '@mui/material'
 import { Medication, MedicationLog } from '../db/db'
-import { useAppContext } from '../contexts/AppContext'
+import { useAppContext } from '../contexts/useAppContext'
 import { db } from '../db/db'
 
 interface EditMedicationDialogProps {

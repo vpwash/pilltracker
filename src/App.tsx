@@ -26,7 +26,7 @@ const theme = createTheme({
   },
 })
 
-import { useAppContext } from './contexts/AppContext'
+import { useAppContext } from './contexts/useAppContext'
 import MedicationHistory from './components/MedicationHistory' // Import MedicationHistory
 
 interface TabPanelProps {
@@ -70,7 +70,7 @@ function App() {
     React.useState(false)
   const [currentTab, setCurrentTab] = React.useState(0);
 
-  const handleTabChange = (event: React.SyntheticEvent, newValue: number) => {
+  const handleTabChange = (_event: React.SyntheticEvent, newValue: number) => {
     setCurrentTab(newValue);
   };
 

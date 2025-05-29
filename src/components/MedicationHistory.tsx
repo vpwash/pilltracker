@@ -14,7 +14,8 @@ import {
   TooltipItem
 } from 'chart.js';
 import { Box, Typography, Select, MenuItem, FormControl, InputLabel, SelectChangeEvent } from '@mui/material';
-import { useAppContext } from '../contexts/AppContext';
+import { useAppContext } from '../contexts/useAppContext';
+import { HistoricalMedicationLog } from '../contexts/types';
 
 type DateData = {
   count: number;
@@ -49,26 +50,22 @@ ChartJS.register(
 
 const MedicationHistory: React.FC = () => {
   const { 
-    historicalMedicationData, 
+    historicalLogs, 
     selectedProfileId, 
-    medicationLogs, 
     profiles, 
     selectProfile 
   } = useAppContext();
 
-  console.log('MedicationHistory component rendering');
-  console.log('selectedProfileId:', selectedProfileId);
-  console.log('historicalMedicationData:', historicalMedicationData);
-  console.log('medicationLogs:', medicationLogs);
-  console.log('Available profiles:', profiles);
 
-  const handleProfileChange = (event: SelectChangeEvent<number>) => {
+
+  const handleProfileChange = (event: SelectChangeEvent<number | string>) => {
+    if (event.target.value === '') return;
     const newProfileId = event.target.value as number;
     selectProfile(newProfileId);
   };
 
   if (!selectedProfileId) {
-    console.log('No profile selected');
+
     return (
       <Box sx={{ mt: 2, p: 2 }}>
         <Typography variant="h6" gutterBottom>
@@ -97,8 +94,8 @@ const MedicationHistory: React.FC = () => {
     );
   }
 
-  if (!historicalMedicationData || historicalMedicationData.length === 0) {
-    console.log('No historical data found');
+  if (!historicalLogs || historicalLogs.length === 0) {
+
     return (
       <Box sx={{ mt: 2, p: 2 }}>
         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 3 }}>
@@ -133,7 +130,7 @@ const MedicationHistory: React.FC = () => {
 
   // Prepare data for the bar chart
   // Group data by medication name and date
-  const medications = Array.from(new Set(historicalMedicationData.map(log => log.medicationName)));
+  const medications = Array.from(new Set(historicalLogs.map((log: HistoricalMedicationLog) => log.medicationName)));
   
   // Group logs by date for each medication and track doses
   const groupedData = new Map<string, Map<string, DateData>>();
@@ -141,9 +138,7 @@ const MedicationHistory: React.FC = () => {
   // Get all unique dates from the logs
   const allDates = new Set<string>();
   
-
-  
-  historicalMedicationData.forEach(log => {
+  historicalLogs.forEach((log: HistoricalMedicationLog) => {
     const date = new Date(log.timestamp).toLocaleDateString();
     allDates.add(date);
     
@@ -158,7 +153,8 @@ const MedicationHistory: React.FC = () => {
     
     const dateData = medData.get(date)!;
     dateData.count += 1;
-    dateData.doses.push(log.medicationDose);
+    // For historical logs, we don't have dose information, so we'll use an empty string
+    dateData.doses.push('');
   });
   
   // Sort dates chronologically
@@ -170,7 +166,7 @@ const MedicationHistory: React.FC = () => {
   const datasets = medications.map((medName, index) => {
     const medData = groupedData.get(medName) || new Map<string, DateData>();
     
-    const dataPoints = sortedDates.map((date): ChartDataPoint => {
+    const dataPoints = sortedDates.map((date: string): ChartDataPoint => {
       const data = medData.get(date);
       return {
         x: date,
@@ -209,6 +205,10 @@ const MedicationHistory: React.FC = () => {
   };
 
   const options: ChartOptions<'bar'> = {
+    animation: {
+      duration: 1000,
+      easing: 'easeInOutQuart'
+    },
     parsing: {
       xAxisKey: 'x',
       yAxisKey: 'y'
@@ -293,23 +293,9 @@ const MedicationHistory: React.FC = () => {
             
             if (doses.length === 0) return [];
             
-            const doseCounts = doses.reduce((acc: Record<string, number>, dose: string) => {
-              acc[dose] = (acc[dose] || 0) + 1;
-              return acc;
-            }, {} as Record<string, number>);
-            
-            const doseText = Object.entries(doseCounts)
-              .map(([dose, count]) => 
-                count > 1 
-                  ? `${count} × ${dose}` 
-                  : dose
-              )
-              .join(', ');
-            
-            return [
-              `${label}: ${value} time${value !== 1 ? 's' : ''}`,
-              `Doses: ${doseText}`
-            ];
+            // Since we don't have dose information in historical logs,
+            // we'll just show the count
+            return [`${label}: ${value} time${value !== 1 ? 's' : ''}`];
           },
         },
       },

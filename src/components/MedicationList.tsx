@@ -11,7 +11,7 @@ import {
 import DeleteIcon from '@mui/icons-material/Delete'
 import EditIcon from '@mui/icons-material/Edit'
 import AddIcon from '@mui/icons-material/Add'
-import { useAppContext } from '../contexts/AppContext'
+import { useAppContext } from '../contexts/useAppContext'
 import { Button } from '@mui/material' // Import Button
 
 interface MedicationListProps {

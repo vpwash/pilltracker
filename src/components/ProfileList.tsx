@@ -8,7 +8,7 @@ import {
   ListItemButton,
 } from '@mui/material'
 import DeleteIcon from '@mui/icons-material/Delete'
-import { useAppContext } from '../contexts/AppContext'
+import { useAppContext } from '../contexts/useAppContext'
 // Removed unused Profile import
 
 // interface ProfileListProps {} // Removed empty interface

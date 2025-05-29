@@ -7,7 +7,7 @@ import {
   Box,
   Button,
   Dialog, DialogTitle, DialogContent, DialogActions, TextField } from '@mui/material'
-import { useAppContext } from '../contexts/AppContext'
+import { useAppContext } from '../contexts/useAppContext'
 import { db } from '../db/db'
 
 const MedicationLogList: React.FC = () => {

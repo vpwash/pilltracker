@@ -7,7 +7,7 @@ import {
   TextField,
   Button,
 } from '@mui/material'
-import { useAppContext } from '../contexts/AppContext'
+import { useAppContext } from '../contexts/useAppContext'
 
 interface AddProfileDialogProps {
   open: boolean
