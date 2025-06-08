@@ -23,7 +23,9 @@ export interface AppContextType {
   addMedication: (medication: Omit<Medication, 'id' | 'frequency'>) => Promise<number | undefined>;
   updateMedication: (medication: Medication) => Promise<number | undefined>;
   deleteMedication: (medicationId: number) => Promise<void>;
-  logMedicationTaken: (medicationId: number) => Promise<number | undefined>;
+  logMedicationTaken: (medicationId: number, timestamp: number) => Promise<number | undefined>;
+  updateMedicationLog: (logId: number, updates: { timestamp: number }) => Promise<boolean>;
+  deleteMedicationLog: (logId: number) => Promise<boolean>;
   getLogsForMedication: (medicationId: number) => MedicationLog[] | undefined;
 }
 

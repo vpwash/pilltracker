@@ -27,7 +27,7 @@ const theme = createTheme({
 })
 
 import { useAppContext } from './contexts/useAppContext'
-import MedicationHistory from './components/MedicationHistory' // Import MedicationHistory
+import MedicationHistoryList from './components/MedicationHistoryList' // Import MedicationHistoryList
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -111,9 +111,9 @@ function App() {
           </Toolbar>
         </AppBar>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-            <Tabs value={currentTab} onChange={handleTabChange} aria-label="basic tabs example">
+            <Tabs value={currentTab} onChange={handleTabChange} aria-label="main tabs">
               <Tab label="Current Medications" {...a11yProps(0)} />
-              <Tab label="Medication History" {...a11yProps(1)} />
+              <Tab label="History" {...a11yProps(1)} />
             </Tabs>
           </Box>
         <TabPanel value={currentTab} index={0}>
@@ -133,11 +133,8 @@ function App() {
           </Container>
         </TabPanel>
         <TabPanel value={currentTab} index={1}>
-          <Container
-            component='main'
-            sx={{ flexGrow: 1 }}
-          >
-            <MedicationHistory />
+          <Container component='main' sx={{ flexGrow: 1 }}>
+            <MedicationHistoryList />
           </Container>
         </TabPanel>
         <Box

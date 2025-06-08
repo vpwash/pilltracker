@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
   List,
   ListItem,
@@ -6,13 +6,14 @@ import {
   IconButton,
   Typography,
   Box,
-  ListItemButton, // Import ListItemButton
+  ListItemButton,
 } from '@mui/material'
 import DeleteIcon from '@mui/icons-material/Delete'
 import EditIcon from '@mui/icons-material/Edit'
 import AddIcon from '@mui/icons-material/Add'
 import { useAppContext } from '../contexts/useAppContext'
-import { Button } from '@mui/material' // Import Button
+import { Button } from '@mui/material'
+import LogMedicationDialog from './LogMedicationDialog' // Import the new dialog component
 
 interface MedicationListProps {
   onAddMedicationClick: () => void
@@ -61,8 +62,20 @@ const MedicationList: React.FC<MedicationListProps> = ({
     onEditMedicationClick() // Call the prop function to open the edit dialog
   }
 
-  const handleLogClick = (medicationId: number) => {
-    logMedicationTaken(medicationId) // Log the medication dose
+  const [logDialogOpen, setLogDialogOpen] = useState(false)
+  const [selectedMedicationForLog, setSelectedMedicationForLog] = useState<{id: number, name: string} | null>(null)
+
+  const handleLogClick = (medicationId: number, medicationName: string) => {
+    setSelectedMedicationForLog({ id: medicationId, name: medicationName })
+    setLogDialogOpen(true)
+  }
+
+  const handleLogConfirm = (timestamp: number) => {
+    if (selectedMedicationForLog) {
+      logMedicationTaken(selectedMedicationForLog.id, timestamp)
+    }
+    setLogDialogOpen(false)
+    setSelectedMedicationForLog(null)
   }
 
   const handleMedicationClick = (medicationId: number) => {
@@ -124,7 +137,7 @@ const MedicationList: React.FC<MedicationListProps> = ({
                   <IconButton
                     edge='end'
                     aria-label='log'
-                    onClick={() => handleLogClick(medication.id!)}
+                    onClick={() => handleLogClick(medication.id!, medication.name)}
                     sx={{ mr: 1 }}
                   >
                     <AddIcon />
@@ -187,6 +200,15 @@ const MedicationList: React.FC<MedicationListProps> = ({
       >
         Add Medication
       </Button>
+      
+      {selectedMedicationForLog && (
+        <LogMedicationDialog
+          open={logDialogOpen}
+          onClose={() => setLogDialogOpen(false)}
+          onLog={handleLogConfirm}
+          medicationName={selectedMedicationForLog.name}
+        />
+      )}
     </Box>
   )
 }

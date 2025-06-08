@@ -88,13 +88,34 @@ export const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
     }
   }, []);
 
-  const logMedicationTaken = useCallback(async (medicationId: number) => {
+  const logMedicationTaken = useCallback(async (medicationId: number, timestamp: number) => {
     try {
-      const timestamp = Date.now();
       return await db.medicationLog.add({ medicationId, timestamp });
     } catch (error) {
       console.error('Error logging medication:', error);
       return undefined;
+    }
+  }, []);
+
+  const updateMedicationLog = useCallback(async (logId: number, updates: { timestamp: number }) => {
+    try {
+      await db.medicationLog.update(logId, {
+        timestamp: updates.timestamp
+      });
+      return true;
+    } catch (error) {
+      console.error('Error updating medication log:', error);
+      return false;
+    }
+  }, []);
+
+  const deleteMedicationLog = useCallback(async (logId: number) => {
+    try {
+      await db.medicationLog.delete(logId);
+      return true;
+    } catch (error) {
+      console.error('Error deleting medication log:', error);
+      return false;
     }
   }, []);
 
@@ -179,6 +200,8 @@ export const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
       updateMedication,
       deleteMedication,
       logMedicationTaken,
+      updateMedicationLog,
+      deleteMedicationLog,
       getLogsForMedication,
     }),
     [
