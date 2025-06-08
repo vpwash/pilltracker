@@ -30,7 +30,7 @@ const MedicationLogList: React.FC = () => {
 
   const handleLogTaken = () => {
     if (selectedMedicationId !== null) {
-      logMedicationTaken(selectedMedicationId)
+      logMedicationTaken(selectedMedicationId, Date.now())
     }
   }
 
